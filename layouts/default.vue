@@ -1,20 +1,13 @@
 <template>
   <div>
     <nav
-      class="navbar header has-shadow is-primary"
+      class="navbar is-spaced header has-shadow is-primary"
       role="navigation"
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+        <a class="navbar-item" href="/">
+          <img src="~assets/buefy.png" alt="Buefy" height="30" />
         </a>
 
         <div class="navbar-burger">
@@ -25,26 +18,17 @@
       </div>
     </nav>
 
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">
-          General
-        </p>
-        <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key"
-          >
-            <nuxt-link
-              :to="item.to"
-              exact-active-class="is-active"
-            >
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </aside>
+    <!-- hero -->
+    <section class="hero is-medium is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Primary bold title</h1>
+          <h2 class="subtitle">Primary bold subtitle</h2>
+        </div>
+      </div>
+    </section>
 
+    <section class="main-content columns">
       <div class="container column is-10">
         <nuxt />
       </div>
@@ -54,21 +38,21 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       items: [
         {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' }
+          title: "Home",
+          icon: "home",
+          to: { name: "index" }
         },
         {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
+          title: "Inspire",
+          icon: "lightbulb",
+          to: { name: "inspire" }
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
